@@ -1,0 +1,122 @@
+
+ body {
+  background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=826&t=st=1697245290~exp=1697245890~hmac=2b0b15928c6e711d5f384968813b8c66c88592fb33e78215ca76c4c17f141ad2); 
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: nowrap;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  min-height: 100vh;
+} 
+.container{
+ 
+  display: flex; /* Turn the container into a flex container */
+  align-items: center; /* Center vertically within the container */
+  justify-content: center; /* Center horizontally within the container */
+}
+.main-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(214, 247, 92);
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+
+}
+
+.listing-container {
+  background-color: rgb(214, 247, 92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.listing-container img {
+  width: 300px;
+  height: 250px;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.buttonGroup button{
+  margin-left: 8px;
+  border-radius: 20px;
+}
+button{
+  border-radius: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.history-sidebar {
+  top: 20%;
+  left: 1%;
+  position: absolute;
+  overflow-y: auto;
+  max-height: 75vh;
+  min-height: 75vh;
+  align-items: center;
+  /* justify-content: flex-start; */
+  justify-content: flex-start ;
+  display:flex;
+  flex-direction: column;
+  margin-right: 120px;
+  text-align: center;
+}
+.history-sidebar img{
+  width: 70px;
+  height: 70px;
+}
+ul {
+  list-style: none;
+}
+.historyItem{
+  justify-content: center;
+  align-items: center;
+}
+.ban-sidebar {
+  background-color: rgb(48, 231, 244);
+  flex-grow: 1;
+  position: fixed;
+  top: 0;
+  width: 187px;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
+  align-items: center;
+  text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: row; /* Stack elements vertically on smaller screens */
+  }
+  .main-content {
+    flex: 1; /* Adjust flex value for smaller screens */
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .history-sidebar {
+    flex: 1; /* Adjust flex value for smaller screens */
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .ban-sidebar {
+    display: none; /* Hide the sidebar for smaller screens */
+  }
+}
